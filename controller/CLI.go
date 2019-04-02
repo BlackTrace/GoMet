@@ -1,4 +1,4 @@
-package gomet
+package controller
 
 import (
 	"github.com/abiosoft/ishell"
@@ -29,7 +29,7 @@ func (c *CLI) Start() {
 	c.shell.Println("	| |  _ / _ \\| |\\/| |/ _ \\ __|")
 	c.shell.Println("	| |_| | (_) | |  | |  __/ |_")
 	c.shell.Println("	 \\____|\\___/|_|  |_|\\___|\\__|")
-	c.shell.Println("                                      by Mimah\n\n")
+	c.shell.Println("                                     v0.0.1 by Mimah\n\n")
 
 	c.server.RegisterSessionListener(c)
 	c.registerServerCommands()

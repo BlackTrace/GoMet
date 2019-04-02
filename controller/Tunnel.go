@@ -1,4 +1,4 @@
-package gomet
+package controller
 
 import (
 	"golang.org/x/crypto/ssh"

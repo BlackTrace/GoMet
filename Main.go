@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./gomet"
+	"github.com/mimah/gomet/controller"
 	"fmt"
 	"log"
 	"math/rand"
@@ -29,7 +29,7 @@ func main() {
 	logFile, _ := os.Create("logs/client.log")
 	log.SetOutput(logFile)
 
-	config, err := gomet.LoadConfig()
+	config, err := controller.LoadConfig()
 	if err != nil {
 		fmt.Printf("Invalid configuration file: %s\n", err)
 		return
@@ -38,14 +38,14 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(1)
 
-	server := gomet.NewServer(&wg, config)
+	server := controller.NewServer(&wg, config)
 	server.Start()
 
-	cli := gomet.NewCLI(server)
+	cli := controller.NewCLI(server)
 	go cli.Start()
 
 	if config.Api.Enable {
-		api := gomet.NewApi(server)
+		api := controller.NewApi(server)
 		go api.Start()
 	}
 

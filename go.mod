@@ -1,4 +1,4 @@
-module gomet
+module github.com/mimah/gomet
 
 go 1.12
 
@@ -9,9 +9,12 @@ require (
 	github.com/flynn-archive/go-shlex v0.0.0-20150515145356-3f9db97f8568 // indirect
 	github.com/ginuerzh/gosocks5 v0.2.0
 	github.com/gorilla/mux v1.7.0
+	github.com/kr/pty v1.1.4
 	github.com/mattn/go-colorable v0.1.1 // indirect
 	github.com/mattn/go-isatty v0.0.7 // indirect
+	github.com/nightlyone/lockfile v0.0.0-20180618180623-0ad87eef1443
 	github.com/pkg/errors v0.8.1
+	github.com/robfig/cron v0.0.0-20180505203441-b41be1df6967
 	github.com/xtaci/smux v1.1.2
 	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
 )

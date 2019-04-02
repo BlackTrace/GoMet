@@ -1,4 +1,4 @@
-package gomet
+package controller
 
 import (
 	"bufio"
@@ -398,7 +398,7 @@ func (s *Server) getSessionRoute(ip string) *Session {
 
 	ipAddr := net.ParseIP(ip)
 	if ipAddr == nil {
-		log.Println("Invalid ip %s", ip)
+		log.Printf("Invalid ip %s", ip)
 	}
 
 	for cidr, session := range s.routes {
