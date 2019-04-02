@@ -10,19 +10,16 @@ Build
 -----
 Install Go (https://golang.org/dl/).
 
-Download dependencies.
+Clone repository
 ```
-cd gomet
-go get github.com/abiosoft/ishell@v2.0.0+incompatible
-go get github.com/ginuerzh/gosocks5@v0.2.0
-go get github.com/gorilla/mux@v1.7.0
-go get github.com/xtaci/smux@v1.1.2
-cd ..
+git clone git@github.com:mimah/GoMet.git
 ```
+
 And compile GoMet.
 
 ```
-go build .
+cd GoMet
+go build ./...
 ```
 
 Basic usage
@@ -39,7 +36,7 @@ Launch GoMet
 	| |  _ / _ \| |\/| |/ _ \ __|
 	| |_| | (_) | |  | |  __/ |_
 	 \____|\___/|_|  |_|\___|\__|
-                                      by Mimah
+                                     v0.0.1 by Mimah
 
 server > info
 Local listener: 0.0.0.0:8888

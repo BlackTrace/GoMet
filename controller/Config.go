@@ -1,4 +1,4 @@
-package gomet
+package controller
 
 import (
 	"encoding/json"
