@@ -12,7 +12,7 @@ Install Go (https://golang.org/dl/).
 
 Clone repository
 ```
-git clone git@github.com:mimah/GoMet.git
+git clone git@github.com:gomet-app/GoMet.git
 ```
 
 And compile GoMet.
@@ -37,7 +37,7 @@ Launch GoMet
 	| |  _ / _ \| |\/| |/ _ \ __|
 	| |_| | (_) | |  | |  __/ |_
 	 \____|\___/|_|  |_|\___|\__|
-                                     v0.0.1 by Mimah
+                                     v0.0.1
 
 server > info
 Local listener: 0.0.0.0:8888
